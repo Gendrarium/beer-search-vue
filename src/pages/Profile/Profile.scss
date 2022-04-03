@@ -1,0 +1,85 @@
+@import '@/styles/styles.scss';
+
+.profile {
+  min-height: calc(100vh - $header-height);
+  display: flex;
+  padding: 20px 100px;
+  justify-content: space-around;
+  align-items: center;
+
+  @include mq(1279) {
+    padding: 20px;
+  }
+
+  @include mq(1079) {
+    flex-direction: column;
+  }
+
+  &__user-container {
+    min-height: 500px;
+    min-width: 500px;
+    border: 1px solid $main-color;
+    border-radius: 5px;
+    margin-right: 20px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+
+    @include mq(1079) {
+      margin: 0 0 20px 0;
+    }
+
+    @include mq(767) {
+      min-width: 100%;
+    }
+
+    @include mq(479) {
+      min-height: 450px;
+    }
+  }
+
+  &__user {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    font-size: 26px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 10px;
+
+    @include mq(1279) {
+      font-size: 24px;
+    }
+
+    @include mq(1079) {
+      font-size: 22px;
+    }
+
+    @include mq(767) {
+      font-size: 24px;
+    }
+  }
+
+  &__img {
+    width: 300px;
+    height: 300px;
+    margin: 0 auto 20px;
+
+    @include mq(479) {
+      width: 250px;
+      height: 250px;
+    }
+  }
+
+  &__list {
+    list-style: none;
+  }
+
+  &__beer-container {
+    @include mq(767) {
+      width: 100%;
+    }
+  }
+}
