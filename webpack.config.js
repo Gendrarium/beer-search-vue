@@ -4,9 +4,21 @@ const { VueLoaderPlugin } = require('vue-loader');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const webpack = require('webpack');
+const dotenv = require('dotenv');
 const autoprefixer = require('autoprefixer');
 
 module.exports = (env, argv) => {
+  // let envConsts = {};
+
+  // const envConfig = dotenv.config();
+
+  // if (envConfig.parsed) {
+  //   const parsed = envConfig.parsed;
+  //   Object.keys(parsed).forEach((key) => {
+  //     envConsts[`${key}`] = JSON.stringify(parsed[key]);
+  //   });
+  // }
+
   return {
     mode: argv.mode,
     devServer: {
@@ -95,6 +107,7 @@ module.exports = (env, argv) => {
       new webpack.DefinePlugin({
         __VUE_OPTIONS_API__: true,
         __VUE_PROD_DEVTOOLS__: argv.mode === 'development' ? true : false,
+        // ...envConsts,
       }),
     ],
     resolve: {

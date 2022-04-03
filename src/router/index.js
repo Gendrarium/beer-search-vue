@@ -1,14 +1,14 @@
-import { createRouter, createWebHistory } from "vue-router";
-import Home from "@/pages/Home/Home";
-import Profile from "@/pages/Profile/Profile";
+import { createRouter, createWebHistory } from 'vue-router';
+import Home from '@/pages/Home/Home';
+import Profile from '@/pages/Profile/Profile';
 
 const routes = [
   {
-    path: "/",
+    path: '/',
     component: Home,
   },
   {
-    path: "/profile",
+    path: '/profile',
     component: Profile,
   },
 ];
