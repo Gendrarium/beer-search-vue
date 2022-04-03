@@ -9,4 +9,4 @@
 
 Это тестовое задание для компании Банда умников.
 
-[Демо](https://gendrarium.github.io/beer-search-vue/)
+[Демо](https://gendrarium-beer-search.herokuapp.com/)
